@@ -9,7 +9,9 @@
 			"vector": "cpp",
 			"iostream": "cpp",
 			"ostream": "cpp",
-			"__config": "cpp"
+			"__config": "cpp",
+			"string": "cpp",
+			"map": "cpp"
 		}
 	}
 }
