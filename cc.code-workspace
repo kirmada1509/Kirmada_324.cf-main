@@ -11,7 +11,15 @@
 			"ostream": "cpp",
 			"__config": "cpp",
 			"string": "cpp",
-			"map": "cpp"
+			"map": "cpp",
+			"__hash_table": "cpp",
+			"__node_handle": "cpp",
+			"__split_buffer": "cpp",
+			"__tree": "cpp",
+			"deque": "cpp",
+			"list": "cpp",
+			"set": "cpp",
+			"unordered_map": "cpp"
 		}
 	}
 }
