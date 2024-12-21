@@ -2,19 +2,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+inline void debugMode() {
+
+#ifndef ONLINE_JUDGE
+
+freopen("input.txt", "r", stdin);
+
+freopen("output.txt", "w", stdout);
+
+#endif // ONLINE_JUDGE
+}
 int main(){
-    int N, C;
-    cin>>N>>C;
-    int prev = -1000;
-    int curr, count = 0;
-    for(int i = 0; i < N; i++){
-        cin>>curr;
-        // cout<<curr-prev<<endl;
-        if(curr - prev >= C){
-            count++;
-            prev = curr;
-        }
-    }
-    // cout<<"ans: "<<count<<endl;
-    cout<<count<<endl;
+    debugMode();
+    int x;
+    cin>>x;
+        cout<<x + 10;
 }

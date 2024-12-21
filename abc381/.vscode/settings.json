@@ -1,27 +1,23 @@
 {
     "files.associations": {
-        "vector": "cpp",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "__config": "cpp",
+        "*.ejs": "html",
+        "string": "cpp",
+        "__bit_reference": "cpp",
         "__hash_table": "cpp",
         "__split_buffer": "cpp",
         "__tree": "cpp",
         "array": "cpp",
-        "bitset": "cpp",
         "deque": "cpp",
+        "forward_list": "cpp",
         "initializer_list": "cpp",
         "list": "cpp",
         "map": "cpp",
-        "queue": "cpp",
         "regex": "cpp",
         "set": "cpp",
-        "stack": "cpp",
-        "string": "cpp",
         "string_view": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "valarray": "cpp"
-    },
-    "C_Cpp.default.compilerPath": "/usr/bin/g++"
+        "valarray": "cpp",
+        "vector": "cpp"
+    }
 }

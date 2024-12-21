@@ -2,67 +2,59 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// LUOGU_RID: 187756358
-#include<bits/stdc++.h>
+#define get(A, N) for(int i = 0; i < N; i++){int temporary_for_input; cin>>temporary_for_input; A.push_back(temporary_for_input);}
+#define sort_ass(A) sort(A.begin(), A.end())
+#define sort_desi(A) sort(A.begin(), A.end(), [](int a, int b){return a > b;})
+#define print(A) {for(int x: A)cout<<x<<" ";}cout<<endl;
 
-using namespace std;
+//#define make(N)
 
-const int N=1e5+50;
+void solve(){
+    long long int N; cin >> N;
+    int M; cin >> M;
+    int a, b;
+    vector<int> X = {2, 1, -1, -2, -2, -1, 1, 2};
+    vector<int> Y = {1, 2, 2, 1, -1, -2, -2, -1};
+    vector<pair<int, int>> pairs(M, {0,0});
+    // unordered_map<string, int> map;
+    unordered_set<string> set;
+    long long int killed = 0;
 
-long long n,m;
-
-map<pair<long long,long long>,long long> tu;
-
-int dx[10]={0,2,1,-1,-2,-2,-1, 1, 2};
-
-int dy[10]={0,1,2, 2, 1,-1,-2,-2,-1};
-
-int main()
-
-{
-
-    ios::sync_with_stdio(false);
-
-    cin.tie(0),cout.tie(0);
-
-    cin>>n>>m;
-
-    for(int i=1;i<=m;i++)
-
-    {
-
-        long long a,b;
-
+    for(int i = 0; i < M; i++){
         cin>>a>>b;
+        set.insert(to_string(a) + " " + to_string(b));
+        pairs[i].first = a;
+        pairs[i].second = b;
+    }
+    for(int i = 0; i < M; i++){
+        a = pairs[i].first; b = pairs[i].second;
 
-        for(int j=0;j<=8;j++)
-
-        {
-
-            long long x=a+dx[j],y=b+dy[j];
-
-            if(x>=1&&y>=1&&x<=n&&y<=n)
-
-            {
-
-                tu[make_pair(x,y)]=1;
-
-                //cerr<<x<<" "<<y<<endl;
-
+        for(int j = 0; j < 8; j++){
+            // if(a + X[j] < 0 || a + X[j] >= N || b + Y[j] < 0 || b + Y[j] >= N){
+            if(a + X[j] <= 0 || a + X[j] > N || b + Y[j] <= 0 || b + Y[j] > N){
+                continue;
             }
 
+            if(set.find(to_string(a + X[j]) + " " + to_string(b + Y[j])) == set.end()){
+                set.insert((to_string(a + X[j]) + " " + to_string(b + Y[j])));
+                killed++;
+                // set.insert({make_pair(a + X[j], b + Y[j]), 1});
+            }
         }
 
-        //cerr<<endl;
-
     }
+    unsigned long long int res = (N * N) - killed - M;
 
-    long long cnt=tu.size();
+    cout<<res;
 
-    //cerr<<cnt<<endl;
+}
 
-    cout<<n*n-cnt;
+int main(){
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
 
-	return 0;
-
+    solve();
+    return 0;
 }

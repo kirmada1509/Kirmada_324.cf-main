@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.ejs": "html",
+        "iostream": "cpp",
         "__bit_reference": "cpp",
         "__hash_table": "cpp",
         "__split_buffer": "cpp",
@@ -18,7 +19,6 @@
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "valarray": "cpp",
-        "vector": "cpp",
-        "iostream": "cpp"
+        "vector": "cpp"
     }
 }
