@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/dtmk/Desktop/Kirmada_324.cf-main/algo/generate_subsets'
+relocations:     []
+...
