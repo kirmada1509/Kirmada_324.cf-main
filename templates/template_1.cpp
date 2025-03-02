@@ -2,6 +2,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//data types re-defined
+typedef long long int ll;
+
 // Reads N elements from input into vector A
 #define get(A, N, T) for (int i = 0; i < N; i++) { \
     T t; \
@@ -21,6 +24,7 @@ using namespace std;
     for (auto x: A) cout << x << " "; \
     cout << endl; \
 }
+
 
 void solve() {
 
